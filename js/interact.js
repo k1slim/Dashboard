@@ -19,7 +19,7 @@ define(['jquery', 'jquery-ui'],
                 snapTolerance:5
             })
         };
-        
+
         return new Interact();
 
     });

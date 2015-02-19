@@ -31,13 +31,31 @@
   float:right;
   width:185px;
   padding:9px 20px 9px 10px;
-  font-size:22px;
+  font-size:21px;
   color:gray;
 }
 
-.content{
+.content,#aboutContent{
   margin:10px 0;
   padding:10px 20px 10px 24px;
+}
+.content{
+  opacity:1;
+}
+
+#aboutContent{
+  opacity:0;
+}
+
+.about{
+  border:1px solid @borderColor;
+  border-radius:10px;
+  height:300px;
+  padding:10px;
+}
+
+.content>div{
+  text-align:center;
 }
 .content>div:nth-child(1){
   width:218px;
@@ -122,6 +140,10 @@
     display:inline-block;
     border-radius:7px;
     padding:5px 7px;
+
+    a{
+      text-decoration: none;
+    }
   }
 
   .copy{
@@ -129,12 +151,16 @@
     margin-right:25px;
   }
 
+  .aboutButton,.aboutButton2,.ref1>a,.ref2>a{
+    color:blue;
+  }
+
   .aboutButton{
     float:left;
     margin-left:25px;
   }
 
-  .aboutButton:hover,.ref1:hover,.ref2:hover{
+  .aboutButton:hover,.aboutButton2:hover,.ref1:hover,.ref2:hover{
     .borderGradient(100%);
     cursor:pointer;
   }
