@@ -1,4 +1,7 @@
 # Dashboard
+
+http://k1slim.github.io/Dashboard/build/
+
 Day 1
 * Создан проект
 * Настроена интеграция git
