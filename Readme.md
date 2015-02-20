@@ -1,4 +1,7 @@
 # Dashboard
+
+http://k1slim.github.io/Dashboard/build/
+
 Day 1
 * Создан проект
 * Настроена интеграция git
@@ -18,12 +21,7 @@ Day 3
 * Сделана вторая версия окна About
 * Добавлены ссылки
 
-Day 4
-* Много мелких исправлений
-* Добавлен виджет погоды
 
 ## Литература
 * http://lesscss.org/
 * http://htmlbook.ru/
-* http://openweathermap.org/api
-* http://javascript.ru/
