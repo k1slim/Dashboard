@@ -2,7 +2,6 @@ define(['jquery', 'jquery-ui'],
     function($){
 
         var Interact=function(){
-            this.containerInteractiv=$(".content");
             this.draggableElements=$(".content>div");
         };
 
@@ -13,10 +12,11 @@ define(['jquery', 'jquery-ui'],
         Interact.prototype.drag=function(elements){
             $(elements).draggable({
                 containment:'parent',
-                distance:5,
+                distance:10,
                 grid:[20,20],
                 snap:true,
-                snapTolerance:5
+                snapTolerance:10,
+                zIndex: 2700
             })
         };
 
