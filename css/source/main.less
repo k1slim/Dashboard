@@ -92,7 +92,6 @@
       position:absolute;
       left: 66px;
       top: 12px;
-      width: 70px;
     }
   }
   .drag1Second{
@@ -102,13 +101,68 @@
   }
 }
 
-.content>div:nth-child(2){
+.drag2{
   width:338px;
-  height:118px;
+  height:178px;
   padding:10px;
   left: 260px;
   top: 10px;
   z-index:11;
+
+  >div{
+    position:absolute;
+    width:57px;
+    height:168px;
+    padding:5px;
+    text-align:center;
+  }
+
+  .day1{
+    background:#0593FF;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+  }
+
+  .day2{
+    left:78px;
+  }
+
+  .day3{
+    left:146px;
+    background:#0593FF;
+  }
+
+  .day4{
+    left:213px;
+  }
+
+  .day5{
+    left:281px;
+    background:#0593FF;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+  }
+
+  .drag2Day1Title,.drag2Day2Title,.drag2Day3Title,.drag2Day4Title,.drag2Day5Title{
+    height:20px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .drag2Day1ImagePlaceholder,.drag2Day2ImagePlaceholder,.drag2Day3ImagePlaceholder,.drag2Day4ImagePlaceholder,.drag2Day5ImagePlaceholder{
+    width:50px;
+    height:50px;
+    margin:0 3px;
+    top:25px;
+    position:absolute;
+  }
+
+  .drag2Day1Placeholder,.drag2Day2Placeholder,.drag2Day3Placeholder,.drag2Day4Placeholder,.drag2Day5Placeholder{
+    position:absolute;
+    top: 75px;
+    width:57px;
+    height:78px;
+  }
 }
 
 .content>div:nth-child(3){
@@ -116,7 +170,7 @@
   height:78px;
   padding:10px;
   left: 260px;
-  top: 150px;
+  top: 210px;
   z-index:12;
 }
 
