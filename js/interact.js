@@ -13,10 +13,10 @@ define(['jquery', 'jquery-ui'],
             $(elements).draggable({
                 containment:'parent',
                 distance:10,
-                grid:[20,20],
+                grid:[10,10],
                 snap:true,
-                snapTolerance:10,
-                zIndex: 2700
+                snapTolerance:15,
+                zIndex: 20
             })
         };
 

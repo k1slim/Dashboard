@@ -14,7 +14,8 @@ define(['jquery', 'jquery-ui'],
             this.get("http://api.openweathermap.org/data/2.5/forecast/daily?q=Minsk&lang=ru&units=metric&cnt=5&mode=xml",this.parseDailyWeather);
 
             setInterval(function(){
-                self.get("http://api.openweathermap.org/data/2.5/weather?q=Minsk&lang=ru&units=metric",self.parseWeather)
+                self.get("http://api.openweathermap.org/data/2.5/weather?q=Minsk&lang=ru&units=metric",self.parseWeather);
+                self.get("http://api.openweathermap.org/data/2.5/forecast/daily?q=Minsk&lang=ru&units=metric&cnt=5&mode=xml",self.parseDailyWeather);
             }, 10800000)
 
         };
