@@ -61,7 +61,7 @@
   background:white;
   display:inline-block;
   position:absolute;
-  border-radius:5px;
+  border-radius:@borderRad;
   border:1px solid @borderColor;
 }
 
@@ -72,14 +72,15 @@
   height:118px;
   padding:10px;
   z-index:10;
+  .boxShadow(-70px);
 
   >div{
     height:50px;
   }
   .drag1First{
     background:#0593FF;
-    border-top-left-radius:5px;
-    border-top-right-radius:5px;
+    border-top-left-radius:@borderRad;
+    border-top-right-radius:@borderRad;
     padding:5px;
     position:relative;
 
@@ -95,8 +96,8 @@
     }
   }
   .drag1Second{
-    border-bottom-left-radius:5px;
-    border-bottom-right-radius:5px;
+    border-bottom-left-radius:@borderRad;
+    border-bottom-right-radius:@borderRad;
     padding:0 5px 5px 5px;
   }
 }
@@ -108,6 +109,7 @@
   left: 260px;
   top: 10px;
   z-index:11;
+  .boxShadow(-100px);
 
   >div{
     position:absolute;
@@ -119,8 +121,8 @@
 
   .day1{
     background:#0593FF;
-    border-top-left-radius:5px;
-    border-bottom-left-radius:5px;
+    border-top-left-radius:@borderRad;
+    border-bottom-left-radius:@borderRad;
   }
 
   .day2{
@@ -139,8 +141,8 @@
   .day5{
     left:281px;
     background:#0593FF;
-    border-top-right-radius:5px;
-    border-bottom-right-radius:5px;
+    border-top-right-radius:@borderRad;
+    border-bottom-right-radius:@borderRad;
   }
 
   .drag2Day1Title,.drag2Day2Title,.drag2Day3Title,.drag2Day4Title,.drag2Day5Title{
@@ -172,15 +174,37 @@
   left: 260px;
   top: 210px;
   z-index:12;
+  .boxShadow(-50px);
 }
 
-.content>div:nth-child(4){
+.drag4{
   width:218px;
-  height:98px;
+  height:108px;
   padding:10px;
   left: 20px;
   top: 150px;
   z-index:13;
+  .boxShadow(-60px);
+
+  table{
+    font-size:14px;
+    border-spacing:0;
+
+    tr>th:nth-child(1){
+      text-align:left;
+    }
+    tr>th:nth-child(n+2),tr>td:nth-child(n+2){
+      width:65px;
+      text-align:center;
+    }
+
+    .usd,.rub{
+      background:#0593FF;
+    }
+  }
+
+
+
  }
 
 .content>div:nth-child(5){
@@ -190,6 +214,9 @@
   left: 620px;
   top: 110px;
   z-index:14;
+  .boxShadow(-50px);
+
+
 }
 
 .content>div:nth-child(6){
@@ -199,6 +226,7 @@
   left: 620px;
   top: 10px;
   z-index:15;
+  .boxShadow(-50px);
 }
 
 .footer{
