@@ -5,12 +5,12 @@ require.config({
         'dot': '../bower_components/jquery.dotdotdot/src/js/jquery.dotdotdot.min',
 
         'interact': 'interact',
-        'request' : 'request',
+        'request': 'request',
         'about': 'about'
     }
 });
 
-require(['interact','request','about'], function(interact,request,about){
+require(['interact', 'request', 'about'], function(interact, request, about){
     interact.init();
     request.init();
     about.init();

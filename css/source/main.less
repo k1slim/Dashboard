@@ -1,23 +1,19 @@
 @import "mix.less";
 @import "var.less";
-
 .close{
   display:none;
 }
-
 .page{
-  font-family:Calibri,sans-serif;
+  font-family:Calibri, sans-serif;
   width:1000px;
   margin:0 auto;
 }
-
 .header{
   font-weight:bold;
   display:block;
   .borderGradient(100%);
   height:73px;
 }
-
 .leftHeaderBlock{
   position:relative;
   float:left;
@@ -25,7 +21,6 @@
   padding-left:20px;
   font-size:60px;
 }
-
 .rightHeaderBlock{
   position:relative;
   float:right;
@@ -34,19 +29,16 @@
   font-size:21px;
   color:gray;
 }
-
 #aboutContent{
   opacity:0;
 }
-
 .about{
   border:1px solid @borderColor;
   border-radius:10px;
   height:300px;
   padding:10px;
 }
-
-.content,#aboutContent{
+.content, #aboutContent{
   margin:10px 0;
   padding:10px 20px 10px 20px;
 }
@@ -56,15 +48,13 @@
   position:relative;
   height:300px;
 }
-
-.content>div{
+.content > div{
   background:white;
   display:inline-block;
   position:absolute;
   border-radius:@borderRad;
   border:1px solid @borderColor;
 }
-
 //    Weather
 
 #dragWeather{
@@ -74,9 +64,8 @@
   height:118px;
   padding:10px;
   z-index:10;
-  .boxShadow(-70px);
 
-  >div{
+  > div{
     height:50px;
   }
   .weather{
@@ -93,8 +82,8 @@
     }
     .weatherPlaceholder{
       position:absolute;
-      left: 66px;
-      top: 12px;
+      left:66px;
+      top:12px;
     }
   }
   .weatherOthers{
@@ -103,19 +92,17 @@
     padding:0 5px 5px 5px;
   }
 }
-
 //      Daily Weather
 
 .dragDailyWeather{
   width:338px;
   height:178px;
   padding:10px;
-  left: 260px;
-  top: 10px;
+  left:260px;
+  top:10px;
   z-index:11;
-  .boxShadow(-100px);
 
-  >div{
+  > div{
     position:absolute;
     width:57px;
     height:168px;
@@ -149,13 +136,13 @@
     border-bottom-right-radius:@borderRad;
   }
 
-  .Day1Title,.Day2Title,.Day3Title,.Day4Title,.Day5Title{
+  .Day1Title, .Day2Title, .Day3Title, .Day4Title, .Day5Title{
     height:20px;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight:bold;
+    font-size:18px;
   }
 
-  .Day1ImagePlaceholder,.Day2ImagePlaceholder,.Day3ImagePlaceholder,.Day4ImagePlaceholder,.Day5ImagePlaceholder{
+  .Day1ImagePlaceholder, .Day2ImagePlaceholder, .Day3ImagePlaceholder, .Day4ImagePlaceholder, .Day5ImagePlaceholder{
     width:50px;
     height:50px;
     margin:0 3px;
@@ -163,26 +150,24 @@
     position:absolute;
   }
 
-  .Day1Placeholder,.Day2Placeholder,.Day3Placeholder,.Day4Placeholder,.Day5Placeholder{
+  .Day1Placeholder, .Day2Placeholder, .Day3Placeholder, .Day4Placeholder, .Day5Placeholder{
     position:absolute;
-    top: 75px;
+    top:75px;
     width:57px;
     height:78px;
   }
 }
-
 //     RSS
 
-.dragRSS1,.dragRSS2,.dragRSS3{
+.dragRSS1, .dragRSS2, .dragRSS3{
   width:338px;
   height:88px;
   padding:10px;
-  left: 260px;
-  top: 210px;
+  left:260px;
+  top:210px;
   z-index:12;
-  .boxShadow(-50px);
 
-  >div{
+  > div{
     border-bottom:1px solid #d3d3d3;
     padding-bottom:5px;
     height:18px;
@@ -208,72 +193,65 @@
   }
 
   .rssBodyA{
-    text-decoration: none;
-    color: black;
-    position: absolute;
-    top: 38px;
-    width: 338px;
-    height: 60px;
-    overflow: hidden;
+    text-decoration:none;
+    color:black;
+    position:absolute;
+    top:38px;
+    width:338px;
+    height:60px;
+    overflow:hidden;
 
     .rssBody{
-      width: 338px;
-      height: 60px;
-      overflow: hidden;
-  }
+      width:338px;
+      height:60px;
+      overflow:hidden;
+    }
     .rssBody:hover{
-    text-decoration: underline;
-  }
+      text-decoration:underline;
+    }
   }
 }
-
 //      Finance
 
 .dragFinance{
   width:218px;
-  height:108px;
+  height:98px;
   padding:10px;
-  left: 20px;
-  top: 150px;
+  left:20px;
+  top:150px;
   z-index:13;
-  .boxShadow(-60px);
 
   table{
     font-size:14px;
     border-spacing:0;
 
-    tr>th:nth-child(1){
+    tr > th:nth-child(1){
       text-align:left;
     }
-    tr>th:nth-child(n+2),tr>td:nth-child(n+2){
+    tr > th:nth-child(n+2), tr > td:nth-child(n+2){
       width:65px;
       text-align:center;
     }
 
-    .usd,.rub{
+    .usd, .rub{
       background:#0593FF;
     }
   }
- }
-
+}
 //      RSS
 
 .dragRSS2{
-  left: 620px;
-  top: 110px;
+  left:620px;
+  top:120px;
   z-index:14;
-  .boxShadow(-50px);
 }
-
 //    RSS
 
 .dragRSS3{
-  left: 620px;
-  top: 10px;
+  left:620px;
+  top:10px;
   z-index:15;
-  .boxShadow(-50px);
 }
-
 .footer{
   .borderGradient(0%);
   clear:both;
@@ -287,7 +265,7 @@
     padding:5px 7px;
 
     a{
-      text-decoration: none;
+      text-decoration:none;
     }
   }
 
@@ -296,7 +274,7 @@
     margin-right:25px;
   }
 
-  .aboutButton,.ref1>a,.ref2>a{
+  .aboutButton, .ref1 > a, .ref2 > a{
     color:blue;
   }
 
@@ -305,7 +283,7 @@
     margin-left:25px;
   }
 
-  .aboutButton:hover,.ref1:hover,.ref2:hover{
+  .aboutButton:hover, .ref1:hover, .ref2:hover{
     .borderGradient(100%);
     cursor:pointer;
   }
