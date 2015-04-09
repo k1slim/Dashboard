@@ -16,7 +16,8 @@ define(['jquery', 'jquery-ui'],
                 grid:[10,10],
                 snap:true,
                 snapTolerance:15,
-                zIndex: 20
+                zIndex: 20,
+                cursor: "move"
             })
         };
 

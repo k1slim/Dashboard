@@ -65,7 +65,9 @@
   border:1px solid @borderColor;
 }
 
-#drag1{
+//    Weather
+
+#dragWeather{
   left:20px;
   top:10px;
   width:218px;
@@ -77,32 +79,34 @@
   >div{
     height:50px;
   }
-  .drag1First{
+  .weather{
     background:#0593FF;
     border-top-left-radius:@borderRad;
     border-top-right-radius:@borderRad;
     padding:5px;
     position:relative;
 
-    .drag1FirstImagePlaceholder{
+    .weatherImagePlaceholder{
       width:50px;
       position:absolute;
 
     }
-    .drag1FirstPlaceholder{
+    .weatherPlaceholder{
       position:absolute;
       left: 66px;
       top: 12px;
     }
   }
-  .drag1Second{
+  .weatherOthers{
     border-bottom-left-radius:@borderRad;
     border-bottom-right-radius:@borderRad;
     padding:0 5px 5px 5px;
   }
 }
 
-.drag2{
+//      Daily Weather
+
+.dragDailyWeather{
   width:338px;
   height:178px;
   padding:10px;
@@ -145,13 +149,13 @@
     border-bottom-right-radius:@borderRad;
   }
 
-  .drag2Day1Title,.drag2Day2Title,.drag2Day3Title,.drag2Day4Title,.drag2Day5Title{
+  .Day1Title,.Day2Title,.Day3Title,.Day4Title,.Day5Title{
     height:20px;
     font-weight: bold;
     font-size: 18px;
   }
 
-  .drag2Day1ImagePlaceholder,.drag2Day2ImagePlaceholder,.drag2Day3ImagePlaceholder,.drag2Day4ImagePlaceholder,.drag2Day5ImagePlaceholder{
+  .Day1ImagePlaceholder,.Day2ImagePlaceholder,.Day3ImagePlaceholder,.Day4ImagePlaceholder,.Day5ImagePlaceholder{
     width:50px;
     height:50px;
     margin:0 3px;
@@ -159,7 +163,7 @@
     position:absolute;
   }
 
-  .drag2Day1Placeholder,.drag2Day2Placeholder,.drag2Day3Placeholder,.drag2Day4Placeholder,.drag2Day5Placeholder{
+  .Day1Placeholder,.Day2Placeholder,.Day3Placeholder,.Day4Placeholder,.Day5Placeholder{
     position:absolute;
     top: 75px;
     width:57px;
@@ -167,17 +171,65 @@
   }
 }
 
-.content>div:nth-child(3){
+//     RSS
+
+.dragRSS1,.dragRSS2,.dragRSS3{
   width:338px;
-  height:78px;
+  height:88px;
   padding:10px;
   left: 260px;
   top: 210px;
   z-index:12;
   .boxShadow(-50px);
+
+  >div{
+    border-bottom:1px solid #d3d3d3;
+    padding-bottom:5px;
+    height:18px;
+
+  }
+
+  .rssHead{
+    position:absolute;
+    width:258px;
+    height:19px;
+    font-weight:bold;
+    overflow:hidden
+  }
+
+  .rssTime{
+    position:absolute;
+    width:80px;
+    right:10px;
+    top:14px;
+    font-size:12px;
+    color:gray;
+    text-align:right;
+  }
+
+  .rssBodyA{
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    top: 38px;
+    width: 338px;
+    height: 60px;
+    overflow: hidden;
+
+    .rssBody{
+      width: 338px;
+      height: 60px;
+      overflow: hidden;
+  }
+    .rssBody:hover{
+    text-decoration: underline;
+  }
+  }
 }
 
-.drag4{
+//      Finance
+
+.dragFinance{
   width:218px;
   height:108px;
   padding:10px;
@@ -202,27 +254,20 @@
       background:#0593FF;
     }
   }
-
-
-
  }
 
-.content>div:nth-child(5){
-  width:338px;
-  height:78px;
-  padding:10px;
+//      RSS
+
+.dragRSS2{
   left: 620px;
   top: 110px;
   z-index:14;
   .boxShadow(-50px);
-
-
 }
 
-.content>div:nth-child(6){
-  width:338px;
-  height:78px;
-  padding:10px;
+//    RSS
+
+.dragRSS3{
   left: 620px;
   top: 10px;
   z-index:15;

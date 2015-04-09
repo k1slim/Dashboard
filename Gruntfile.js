@@ -9,7 +9,7 @@ module.exports = function(grunt){
                     mainConfigFile: "js/init.js",
                     name: "init",
                     include: ['init'],
-                    exclude: ['jquery','jquery-ui'],
+                    exclude: ['jquery','jquery-ui','dot'],
                     out: "build/js/production.js"
                 }
             }
@@ -46,6 +46,10 @@ module.exports = function(grunt){
                     {
                         src: 'bower_components/requirejs/require.js',
                         dest: 'build/js/lib/require.min.js'
+                    },
+                    {
+                        src: 'bower_components/jquery.dotdotdot/src/js/jquery.dotdotdot.min.js',
+                        dest: 'build/js/lib/jquery.dotdotdot.min.js'
                     }
                 ]
             }
@@ -67,6 +71,7 @@ module.exports = function(grunt){
                         from: /bower_components\/requirejs\/require.js/i,
                         to: "js/lib/require.min.js"
                     }
+
                 ]
             },
             code: {
@@ -80,6 +85,10 @@ module.exports = function(grunt){
                     {
                         from: /..\/bower_components\/jquery-ui\/jquery-ui.min/i,
                         to: "lib/jquery-ui.min"
+                    },
+                    {
+                        from: /..\/bower_components\/jquery.dotdotdot\/src\/js\/jquery.dotdotdot.min/i,
+                        to: "lib/jquery.dotdotdot.min"
                     }
                 ]
             }

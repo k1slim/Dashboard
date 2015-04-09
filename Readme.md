@@ -32,9 +32,17 @@ Day 6
 * Добавлен виджет курса валют
 * Мелкие изменения
 
+Day 7
+* Добавлены три RSS виджета
+* Еденицы измерения давления изменены
+
 
 ## Литература
 * http://lesscss.org/
 * http://htmlbook.ru/
 * http://javascript.ru/
 * http://openweathermap.org/api
+* http://habrahabr.ru/
+* https://github.com/BeSite/jQuery.dotdotdot
+* http://requirejs.org/
+* https://github.com/Rob--W/cors-anywhere
