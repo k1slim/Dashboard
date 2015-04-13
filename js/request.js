@@ -14,6 +14,7 @@ define(['jquery', 'jquery-ui', 'dot'],
             this.get("http://api.openweathermap.org/data/2.5/weather?q=Minsk&lang=ru&units=metric", this.parseWeather);
             this.get("http://api.openweathermap.org/data/2.5/forecast/daily?q=Minsk&lang=ru&units=metric&cnt=5&mode=xml", this.parseDailyWeather);
             this.get("https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22USDBYR,EURBYR,RUBBYR%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys", this.parseFinance);
+
             this.get("http://www.bsu.by/xml.aspx?guid=1062", this.parseRss1);
             this.get("http://www.onliner.by/feed", this.parseRss2);
             this.get("http://news.tut.by/rss/geonews/minsk.rss", this.parseRss3);
@@ -79,7 +80,6 @@ define(['jquery', 'jquery-ui', 'dot'],
                 var nowDate = new Date();
                 var pubDate = new Date(date[1]);
                 $(cond + " .rssBodyA").attr('href', $items.eq(i).find("link").text());
-                $body.text($items.eq(i).find("title").text()).dotdotdot({});
 
                 if(nowDate.getDate() == pubDate.getDate() && nowDate.getMonth() == pubDate.getMonth() && nowDate.getFullYear() == pubDate.getFullYear()){
                     $time.html(date[2]);
@@ -94,6 +94,12 @@ define(['jquery', 'jquery-ui', 'dot'],
                 else{
                     i = 0;
                 }
+
+                $body.text($items.eq(i).find("title").text());
+
+                $(document).ready(function(){
+                    $body.dotdotdot({});
+                });
             };
 
             a();
