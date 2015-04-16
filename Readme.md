@@ -36,6 +36,9 @@ Day 7
 * Добавлены три RSS виджета
 * Еденицы измерения давления изменены
 
+Day 8
+* Исправлена ошибка
+* Добавлен виджет местоположения
 
 ## Литература
 * http://lesscss.org/
@@ -46,3 +49,4 @@ Day 7
 * https://github.com/BeSite/jQuery.dotdotdot
 * http://requirejs.org/
 * https://github.com/Rob--W/cors-anywhere
+* https://developers.google.com/maps/documentation/geocoding/

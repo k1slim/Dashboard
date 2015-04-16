@@ -2,9 +2,10 @@ require.config({
     paths: {
         'jquery': '../bower_components/jquery/dist/jquery.min',
         'jquery-ui': '../bower_components/jquery-ui/jquery-ui.min',
-        'dot': '../bower_components/jquery.dotdotdot/src/js/jquery.dotdotdot.min',
+        //'dot': '../bower_components/jquery.dotdotdot/src/js/jquery.dotdotdot.min',
 
         'interact': 'interact',
+        'geo': 'geo',
         'request': 'request',
         'about': 'about'
     }

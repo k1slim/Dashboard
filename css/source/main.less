@@ -46,7 +46,7 @@
   display:block;
   opacity:1;
   position:relative;
-  height:300px;
+  height:330px;
 }
 .content > div{
   background:white;
@@ -96,7 +96,7 @@
 
 .dragDailyWeather{
   width:338px;
-  height:178px;
+  height:188px;
   padding:10px;
   left:260px;
   top:10px;
@@ -105,7 +105,7 @@
   > div{
     position:absolute;
     width:57px;
-    height:168px;
+    height:178px;
     padding:5px;
     text-align:center;
   }
@@ -154,7 +154,7 @@
     position:absolute;
     top:75px;
     width:57px;
-    height:78px;
+    height:108px;
   }
 }
 //     RSS
@@ -164,7 +164,7 @@
   height:88px;
   padding:10px;
   left:260px;
-  top:210px;
+  top:220px;
   z-index:12;
 
   > div{
@@ -252,6 +252,73 @@
   top:10px;
   z-index:15;
 }
+
+//    Geo
+
+.dragGeo{
+  width:338px;
+  height:78px;
+  padding:10px;
+  left:620px;
+  top:230px;
+  z-index:16;
+
+  .geoHeadWrapper{
+    border-bottom:1px solid #d3d3d3;
+    padding-bottom:5px;
+    height:18px;
+
+  }
+
+  .geoHead{
+    position:absolute;
+    width:258px;
+    height:19px;
+    font-weight:bold;
+  }
+
+  .geoMap{
+    position:absolute;
+    width:80px;
+    right:10px;
+    top:14px;
+    font-size:12px;
+    text-align:right;
+
+    .geoMapRef{
+      color:gray;
+      text-decoration:none;
+    }
+
+    .geoMapRef:hover{
+      text-decoration:underline;
+    }
+  }
+
+  .geoAddress{
+    position:absolute;
+    width:338px;
+    height:19px;
+    top:34px;
+  }
+
+  .geoCity{
+    position:absolute;
+    width:338px;
+    height:19px;
+    top:53px;
+  }
+
+  .geoCoord{
+    color:gray;
+    font-size:12px;
+    position:absolute;
+    width:338px;
+    height:14px;
+    top:74px;
+  }
+}
+
 .footer{
   .borderGradient(0%);
   clear:both;
