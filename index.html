@@ -30,22 +30,31 @@
 
             <section class="content">
 
-                <div id="dragWeather">
-                    <div class="weather">
-                        <div class="weatherImagePlaceholder">
-
-                        </div>
-                        <div class="weatherPlaceholder">
-
-                        </div>
+                <div class="dragWeather">
+                    <div class="load">
+                        <img src="image/layout/ajax-loader.gif"/>
                     </div>
-                    <div class="weatherOthers">
+                    <div class="weatherWrapper close">
+                        <div class="weather">
+                            <div class="weatherImagePlaceholder">
 
+                            </div>
+                            <div class="weatherPlaceholder">
+
+                            </div>
+                        </div>
+                        <div class="weatherOthers">
+
+                        </div>
                     </div>
                 </div>
 
                 <div class="dragDailyWeather">
-                    <div class="day1">
+                    <div class="load">
+                        <img src="image/layout/ajax-loader.gif"/>
+                    </div>
+                    <div class="dailyWrapper close">
+                        <div class="day1">
                         <div class="Day1Title">
 
                         </div>
@@ -56,54 +65,58 @@
 
                         </div>
                     </div>
-                    <div class="day2">
-                        <div class="Day2Title">
+                        <div class="day2">
+                            <div class="Day2Title">
 
+                            </div>
+                            <div class="Day2ImagePlaceholder">
+
+                            </div>
+                            <div class="Day2Placeholder">
+
+                            </div>
                         </div>
-                        <div class="Day2ImagePlaceholder">
+                        <div class="day3">
+                            <div class="Day3Title">
 
+                            </div>
+                            <div class="Day3ImagePlaceholder">
+
+                            </div>
+                            <div class="Day3Placeholder">
+
+                            </div>
                         </div>
-                        <div class="Day2Placeholder">
+                        <div class="day4">
+                            <div class="Day4Title">
 
+                            </div>
+                            <div class="Day4ImagePlaceholder">
+
+                            </div>
+                            <div class="Day4Placeholder">
+
+                            </div>
                         </div>
-                    </div>
-                    <div class="day3">
-                        <div class="Day3Title">
+                        <div class="day5">
+                            <div class="Day5Title">
 
-                        </div>
-                        <div class="Day3ImagePlaceholder">
+                            </div>
+                            <div class="Day5ImagePlaceholder">
 
-                        </div>
-                        <div class="Day3Placeholder">
+                            </div>
+                            <div class="Day5Placeholder">
 
-                        </div>
-                    </div>
-                    <div class="day4">
-                        <div class="Day4Title">
-
-                        </div>
-                        <div class="Day4ImagePlaceholder">
-
-                        </div>
-                        <div class="Day4Placeholder">
-
-                        </div>
-                    </div>
-                    <div class="day5">
-                        <div class="Day5Title">
-
-                        </div>
-                        <div class="Day5ImagePlaceholder">
-
-                        </div>
-                        <div class="Day5Placeholder">
-
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="dragRSS1">
-                    <div>
+                    <div class="load">
+                        <img src="image/layout/ajax-loader.gif"/>
+                    </div>
+                    <div class="rss1Wrapper close">
                         <div class="rssHead">
 
                         </div>
@@ -119,34 +132,42 @@
                 </div>
 
                 <div class="dragFinance">
-                    <table>
-                        <tbody>
-                            <tr class="financeHead">
-                                <th>Курсы валют</th>
-                                <th>Покупка</th>
-                                <th>Продажа</th>
-                            </tr>
-                            <tr class="usd">
-                                <td>Доллар США</td>
-                                <td class="buy0"></td>
-                                <td class="sell0"></td>
-                            </tr>
-                            <tr class="euro">
-                                <td>Евро</td>
-                                <td class="buy1"></td>
-                                <td class="sell1"></td>
-                            </tr>
-                            <tr class="rub">
-                                <td>Российский рубль</td>
-                                <td class="buy2"></td>
-                                <td class="sell2"></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="load">
+                        <img src="image/layout/ajax-loader.gif"/>
+                    </div>
+                    <div class="financeWrapper close">
+                        <table>
+                            <tbody>
+                                <tr class="financeHead">
+                                    <th>Курсы валют</th>
+                                    <th>Покупка</th>
+                                    <th>Продажа</th>
+                                </tr>
+                                <tr class="usd">
+                                    <td>Доллар США</td>
+                                    <td class="buy0"></td>
+                                    <td class="sell0"></td>
+                                </tr>
+                                <tr class="euro">
+                                    <td>Евро</td>
+                                    <td class="buy1"></td>
+                                    <td class="sell1"></td>
+                                </tr>
+                                <tr class="rub">
+                                    <td>Российский рубль</td>
+                                    <td class="buy2"></td>
+                                    <td class="sell2"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <div class="dragRSS2">
-                    <div>
+                    <div class="load">
+                        <img src="image/layout/ajax-loader.gif"/>
+                    </div>
+                    <div class="rss2Wrapper close">
                         <div class="rssHead">
 
                         </div>
@@ -162,7 +183,10 @@
                 </div>
 
                 <div class="dragRSS3">
-                    <div>
+                    <div class="load">
+                        <img src="image/layout/ajax-loader.gif"/>
+                    </div>
+                    <div class="rss3Wrapper close">
                         <div class="rssHead">
 
                         </div>
@@ -178,24 +202,76 @@
                 </div>
 
                 <div class="dragGeo">
-                    <div class="geoHeadWrapper">
-                        <div class="geoHead">
-                            Ваше местоположение:
+                    <div class="load">
+                        <img src="image/layout/ajax-loader.gif"/>
+                    </div>
+                    <div class="geoWrapper close">
+                        <div class="geoHeadWrapper">
+                            <div class="geoHead">
+                                Ваше местоположение:
+                            </div>
+                            <div class="geoMap">
+                                <a class="geoMapRef" target="_blank">
+                                    Карта
+                                </a>
+                            </div>
                         </div>
-                        <div class="geoMap">
-                            <a class="geoMapRef" target="_blank">
-                                Карта
-                            </a>
+                        <div class="geoAddress">
+
+                        </div>
+                        <div class="geoCity">
+
+                        </div>
+                        <div class="geoCoord">
+
                         </div>
                     </div>
-                    <div class="geoAddress">
+                </div>
 
+                <div class="dragPollution">
+                    <div class="load">
+                        <img src="image/layout/ajax-loader.gif"/>
                     </div>
-                    <div class="geoCity">
+                    <div class="pollutionWrapper close">
+                        <div>
+                            Загрязняющих веществ в атмосфере
+                        </div>
+                        <div class="pollutionPlaceholder">
 
+                        </div>
+                        <div>
+                            тыс. тонн
+                        </div>
                     </div>
-                    <div class="geoCoord">
+                </div>
 
+                <div class="dragMetro">
+                    <div class="load">
+                        <img src="image/layout/ajax-loader.gif"/>
+                    </div>
+                    <div class="metroWrapper close">
+                        <div >
+                            Время работы метрополитена:
+                            <span class="metroData">
+                                5:30 - 1:00
+                            </span>
+                        </div>
+                        <div>
+                            Стоимость проезда:
+                            <span class="metroData">
+                                4500
+                            </span>
+                            рублей
+                        </div>
+                        <div>
+                            Ближайшая станция:
+                            <span class="stationPlaceholder metroData">
+
+                            </span>
+                        </div>
+                        <div class="lift">
+
+                        </div>
                     </div>
                 </div>
 

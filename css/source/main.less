@@ -46,7 +46,7 @@
   display:block;
   opacity:1;
   position:relative;
-  height:330px;
+  height:450px;
 }
 .content > div{
   background:white;
@@ -55,9 +55,17 @@
   border-radius:@borderRad;
   border:1px solid @borderColor;
 }
+
+.load{
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left:-12px;
+  margin-top:-12px;
+}
 //    Weather
 
-#dragWeather{
+.dragWeather{
   left:20px;
   top:10px;
   width:218px;
@@ -65,7 +73,7 @@
   padding:10px;
   z-index:10;
 
-  > div{
+  .weatherWrapper > div{
     height:50px;
   }
   .weather{
@@ -102,7 +110,7 @@
   top:10px;
   z-index:11;
 
-  > div{
+  .dailyWrapper > div{
     position:absolute;
     width:57px;
     height:178px;
@@ -167,9 +175,8 @@
   top:220px;
   z-index:12;
 
-  > div{
+  .rss1Wrapper > div,.rss2Wrapper > div,.rss3Wrapper > div{
     border-bottom:1px solid #d3d3d3;
-    padding-bottom:5px;
     height:18px;
 
   }
@@ -179,7 +186,8 @@
     width:258px;
     height:19px;
     font-weight:bold;
-    overflow:hidden
+    overflow:hidden;
+    padding-bottom:5px;
   }
 
   .rssTime{
@@ -190,6 +198,7 @@
     font-size:12px;
     color:gray;
     text-align:right;
+    padding-bottom:1px;
   }
 
   .rssBodyA{
@@ -245,15 +254,48 @@
   top:120px;
   z-index:14;
 }
-//    RSS
+//      RSS
 
 .dragRSS3{
   left:620px;
   top:10px;
   z-index:15;
 }
+//      Metro
 
-//    Geo
+.dragMetro{
+  width:338px;
+  height:88px;
+  padding:10px;
+  left:260px;
+  top:330px;
+  z-index:18;
+
+  .metroData{
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
+//      Pollution
+
+.dragPollution{
+  width:218px;
+  height:98px;
+  padding:10px;
+  left:20px;
+  top:270px;
+  z-index:13;
+
+  .pollutionWrapper>div{
+    text-align:center;
+  }
+
+  .pollutionPlaceholder{
+    height:39px;
+    font-size:32px;
+  }
+}
+//      Geo
 
 .dragGeo{
   width:338px;

@@ -40,6 +40,12 @@ Day 8
 * Исправлена ошибка
 * Добавлен виджет местоположения
 
+Day 9
+* Исправлены мелкие ошибки
+* Добавлен виджет загрязнения воздуха
+* Добавлен виджет метро
+* Изменена загрузка виджетов
+
 ## Литература
 * http://lesscss.org/
 * http://htmlbook.ru/
@@ -50,3 +56,5 @@ Day 8
 * http://requirejs.org/
 * https://github.com/Rob--W/cors-anywhere
 * https://developers.google.com/maps/documentation/geocoding/
+* http://opendata.by/
+* http://docs.getdkan.com/docs/dkan-documentation/dkan-api/datastore-api

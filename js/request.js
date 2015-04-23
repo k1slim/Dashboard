@@ -5,7 +5,10 @@ define(['jquery', 'geo', 'jquery-ui'/*,'dot'*/],
             this.weatherImage = $(".weatherImagePlaceholder");
             this.weatherPlaceholder = $(".weatherPlaceholder");
             this.weatherOthers = $(".weatherOthers");
+
             this.finance = $(".dragFinance");
+
+            this.pollution = $(".pollutionPlaceholder");
         };
 
         Request.prototype.init = function(){
@@ -16,6 +19,8 @@ define(['jquery', 'geo', 'jquery-ui'/*,'dot'*/],
             this.get("http://api.openweathermap.org/data/2.5/weather?q=Minsk&lang=ru&units=metric", this.parseWeather);
             this.get("http://api.openweathermap.org/data/2.5/forecast/daily?q=Minsk&lang=ru&units=metric&cnt=5&mode=xml", this.parseDailyWeather);
             this.get("https://query.yahooapis.com/v1/public/yql?q=select+*+from+yahoo.finance.xchange+where+pair+=+%22USDBYR,EURBYR,RUBBYR%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys", this.parseFinance);
+
+            this.get("http://opendata.by/api/action/datastore/search.json?resource_id=5ef029e4-788a-477e-8b3a-bac90a14d381&filters[city]=%D0%BC%D0%B8%D0%BD%D1%81%D0%BA&filters[k2]=%D0%B8%D0%BD%D0%BE%D0%B5&fields=value,year", this.parsePollution);
 
             this.getProxy("http://www.bsu.by/xml.aspx?guid=1062", this.parseRss1);
             this.getProxy("http://www.onliner.by/feed", this.parseRss2);
@@ -47,18 +52,17 @@ define(['jquery', 'geo', 'jquery-ui'/*,'dot'*/],
                 }
             });
 
-            this.get(url,collback);
+            this.get(url, collback);
         };
-
 
 
         Request.prototype.parseWeather = function(data, self){
             self.weatherImage.html('<img src="http://openweathermap.org/img/w/' + data.weather[0].icon + '.png" />');
 
             self.weatherPlaceholder.html(~~data.main.temp + ' &deg, <br/>' + data.weather[0].description);
-            self.weatherOthers.html('Влажность: ' + data.main.humidity + '%,' +
-                                    + '<br/>Давление: ' + (data.main.pressure * 0.75).toFixed(1) + ' мм. Рт., ' +
-                                    + '<br/>Ветер: ' + data.wind.speed + ' м/с');
+            self.weatherOthers.html('Влажность: ' + data.main.humidity + '%,' + '<br/>Давление: ' + (data.main.pressure * 0.75).toFixed(1) + ' мм. Рт., ' + '<br/>Ветер: ' + data.wind.speed + ' м/с');
+            $(".dragWeather .load").hide();
+            $(".weatherWrapper").show();
         };
 
         Request.prototype.parseDailyWeather = function(data, self){
@@ -67,14 +71,11 @@ define(['jquery', 'geo', 'jquery-ui'/*,'dot'*/],
             for(var i = 1; i < 6; i++){
                 dateArr[i - 1] = dateReg.exec($(data).find("time")[i - 1].getAttribute("day"));
                 $(".Day" + i + "Title").html(dateArr[i - 1][2] + '.' + dateArr[i - 1][1]);
-                $(".Day" + i + "ImagePlaceholder").html('<img src="http://openweathermap.org/img/w/' + $(data).find("symbol")[i - 1].getAttribute("var") +
-                + '.png" title="' + $(data).find("symbol")[i - 1].getAttribute("name") + '"/>');
-                $(".Day" + i + "Placeholder").html('<strong>' + ~~$(data).find("temperature")[i - 1].getAttribute("min") + '&deg...' +
-                + ~~$(data).find("temperature")[i - 1].getAttribute("max") + '&deg </strong> <br/>' +
-                + ($(data).find("pressure")[i - 1].getAttribute("value") * 0.75).toFixed(1) + ' мм. Рт.<br/>' +
-                + $(data).find("humidity")[i - 1].getAttribute("value") + '%<br/>' +
-                + $(data).find("windSpeed")[i - 1].getAttribute("mps") + '<br/>м/с');
+                $(".Day" + i + "ImagePlaceholder").html('<img src="http://openweathermap.org/img/w/' + $(data).find("symbol")[i - 1].getAttribute("var") + '.png" title="' + $(data).find("symbol")[i - 1].getAttribute("name") + '"/>');
+                $(".Day" + i + "Placeholder").html('<strong>' + ~~$(data).find("temperature")[i - 1].getAttribute("min") + '&deg...' + +~~$(data).find("temperature")[i - 1].getAttribute("max") + '&deg </strong> <br/>' + +($(data).find("pressure")[i - 1].getAttribute("value") * 0.75).toFixed(1) + ' мм. Рт.<br/>' + +$(data).find("humidity")[i - 1].getAttribute("value") + '%<br/>' + +$(data).find("windSpeed")[i - 1].getAttribute("mps") + '<br/>м/с');
             }
+            $(".dragDailyWeather .load").hide();
+            $(".dailyWrapper").show();
         };
 
         Request.prototype.parseFinance = function(data, self){
@@ -82,6 +83,8 @@ define(['jquery', 'geo', 'jquery-ui'/*,'dot'*/],
                 $(".buy" + i).html(~~data.query.results.rate[i].Bid + ' р.');
                 $(".sell" + i).html(~~data.query.results.rate[i].Ask + ' р.');
             }
+            $(".dragFinance .load").hide();
+            $(".financeWrapper").show();
         };
 
         Request.prototype.parseRss = function(cond, data){
@@ -126,16 +129,28 @@ define(['jquery', 'geo', 'jquery-ui'/*,'dot'*/],
             var cond = ".dragRSS1";
             self.parseRss(cond, data);
             $(cond + " .rssHead").html("Новости БГУ");
+            $(cond + " .load").hide();
+            $(".rss1Wrapper").show();
         };
 
         Request.prototype.parseRss2 = function(data, self){
             var cond = ".dragRSS2";
             self.parseRss(cond, data);
+            $(cond + " .load").hide();
+            $(".rss2Wrapper").show();
         };
 
         Request.prototype.parseRss3 = function(data, self){
             var cond = ".dragRSS3";
             self.parseRss(cond, data);
+            $(cond + " .load").hide();
+            $(".rss3Wrapper").show();
+        };
+
+        Request.prototype.parsePollution = function(data, self){
+            self.pollution.text(data.result.records[data.result.total - 1].value);
+            $(".dragPollution .load").hide();
+            $(".pollutionWrapper").show();
         };
 
         return new Request();

@@ -46,6 +46,10 @@ module.exports = function(grunt){
                     {
                         src: 'bower_components/requirejs/require.js',
                         dest: 'build/js/lib/require.min.js'
+                    },
+                    {
+                        src: 'image/layout/ajax-loader.gif',
+                        dest: 'build/image/layout/ajax-loader.gif'
                     }/*,
                     {
                         src: 'bower_components/jquery.dotdotdot/src/js/jquery.dotdotdot.min.js',
